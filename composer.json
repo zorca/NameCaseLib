@@ -1,6 +1,6 @@
 {
     "name": "prestoheads/name-case-lib",
-    "type": "library",
+    "type": "package",
     "description": "Fork of http://namecaselib.com/",
     "keywords": [
         "NameCaseLib"
