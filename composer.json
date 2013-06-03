@@ -1,0 +1,22 @@
+{
+    "name": "prestoheads/name-case-lib",
+    "type": "library",
+    "description": "Fork of http://namecaselib.com/",
+    "keywords": [
+        "NameCaseLib"
+    ],
+    "homepage": "https://github.com/prestoheads/NameCaseLib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stanislaw Smetanin",
+            "email": "stanislaw@smetanin-online.name"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "PrestoHeads\\Library": "" }
+    }
+}
