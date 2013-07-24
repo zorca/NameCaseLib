@@ -15,6 +15,7 @@ if (!defined('NCL_DIR'))
 require_once NCL_DIR . '/NCL.php';
 require_once NCL_DIR . '/NCLStr.php';
 require_once NCL_DIR . '/NCLNameCaseWord.php';
+require_once NCL_DIR . '/Money2Str.php';
 
 /**
  * <b>NCL NameCase Core</b>
@@ -1123,6 +1124,12 @@ class NCLNameCaseCore extends NCL
     public function languageVersion()
     {
         return $this->languageBuild;
+    }
+
+    public function money2str($money)
+    {
+        $converter = new Money2Str();
+        return $converter->money2str_ru($money);
     }
 
 }
