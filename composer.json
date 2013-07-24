@@ -1,12 +1,12 @@
 {
-    "name": "prestoheads/name-case-lib",
+    "name": "stansmet/name-case-lib",
     "type": "library",
     "description": "Fork of http://namecaselib.com/",
     "keywords": [
         "NameCaseLib",
-        "PrestoHeads"
+        "stansmet"
     ],
-    "homepage": "https://github.com/prestoheads/NameCaseLib",
+    "homepage": "https://github.com/stansmet/NameCaseLib",
     "license": "MIT",
     "authors": [
         {
