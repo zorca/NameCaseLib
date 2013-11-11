@@ -13,7 +13,7 @@ class Money2str {
     public function money2str_ru($money, $options = 0) {
         $money = preg_replace('/[\,\-\=]/', '.', $money);
      
-        $numbers_m = array('', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь',
+        $numbers_m = array('ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь',
             'восемь', 'девять', 'десять', 'одиннадцать', 'двенадцать', 'тринадцать',
             'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать',
             'девятнадцать', 'двадцать', 30 => 'тридцать', 40 => 'сорок', 50 => 'пятьдесят',
@@ -35,6 +35,10 @@ class Money2str {
             array('триллион', 'триллиона', 'триллионов'),
         );
      
+        $force = [0];
+        if((float)$money <= 1) {
+            $force[] = 1;
+        }
         $ret = '';
      
         // enumerating digit groups from left to right, from trillions to copecks
@@ -47,7 +51,7 @@ class Money2str {
                 $this->dec_digits_group($money, -1, 2);
      
             // process the group if not empty
-            if ($grp != 0) {
+            if ($grp != 0 || in_array($i, $force)) {
      
                 // digital copecks
                 if ($i == 0 && ($options & self::M2S_KOPS_DIGITS)) {
@@ -73,6 +77,9 @@ class Money2str {
                         // the main case
                         else $ret .= $numbers_m[(int) ($dig * pow(10, $j))]. ' ';
                     }
+                }
+                if($grp == 0) {
+                    $ret .= $numbers_m[0].' ';
                 }
                 $ret .= $units_ru[$i][$this->sk_plural_form($dig)]. ' ';
             }
