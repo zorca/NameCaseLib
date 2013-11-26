@@ -8,7 +8,7 @@
  * NCLNameCaseWord - класс, который служит для хранения всей информации о каждом слове
  * 
  * @author Андрей Чайка <bymer3@gmail.com>
- * @version 0.4
+ * @version 0.4.1
  * @package NameCaseLib
  */
 class NCLNameCaseWord
@@ -56,9 +56,9 @@ class NCLNameCaseWord
      * Содержит информацию о том, какие буквы в слове были большими, а какие мальникими:
      * - x - маленькая буква
      * - X - больная буква
-     * @var string 
+     * @var array 
      */
-    private $letterMask = '';
+    private $letterMask = array();
     
     /**
      * Содержит true, если все слово было в верхнем регистре и false, если не было

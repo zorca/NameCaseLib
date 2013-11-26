@@ -24,23 +24,22 @@ require_once NCL_DIR . '/Money2Str.php';
  * абсолютно одинаковым. Содержит все функции для внешнего взаимодействия с библиотекой.
  * 
  * @author Андрей Чайка <bymer3@gmail.com>
- * @version 0.4
+ * @version 0.4.1
  * @package NameCaseLib
  */
 class NCLNameCaseCore extends NCL
 {
+
     /**
      * Версия библиотеки
      * @var string
      */
-    protected $version = '0.4';
-    
+    protected $version = '0.4.1';
     /**
      * Версия языкового файла
      * @var string 
      */
     protected $languageBuild = '0';
-    
     /**
      * Готовность системы:
      * - Все слова идентифицированы (известо к какой части ФИО относится слово)
@@ -143,6 +142,14 @@ class NCLNameCaseCore extends NCL
         $this->workingWord = $word;
         //Чистим кеш
         $this->workindLastCache = array();
+    }
+
+    /**
+     * Если не нужно склонять слово, делает результат таким же как и именительный падеж
+     */
+    protected function makeResultTheSame()
+    {
+        $this->lastResult = array_fill(0, $this->CaseCount, $this->workingWord);
     }
 
     /**
@@ -990,7 +997,7 @@ class NCLNameCaseCore extends NCL
         {
             $this->setGender($gender);
         }
-        
+
         return $this->getFormatted($caseNum, $format);
     }
 
@@ -1016,7 +1023,7 @@ class NCLNameCaseCore extends NCL
     }
 
     /**
-     * Функция пытается применить цыпочку правил для мужских имен
+     * Функция пытается применить цепочку правил для мужских имен
      * @return boolean true - если было использовано правило из списка, false - если правило не было найденым
      */
     protected function manFirstName()
@@ -1025,7 +1032,7 @@ class NCLNameCaseCore extends NCL
     }
 
     /**
-     * Функция пытается применить цыпочку правил для женских имен
+     * Функция пытается применить цепочку правил для женских имен
      * @return boolean true - если было использовано правило из списка, false - если правило не было найденым
      */
     protected function womanFirstName()
@@ -1034,7 +1041,7 @@ class NCLNameCaseCore extends NCL
     }
 
     /**
-     * Функция пытается применить цыпочку правил для мужских фамилий
+     * Функция пытается применить цепочку правил для мужских фамилий
      * @return boolean true - если было использовано правило из списка, false - если правило не было найденым
      */
     protected function manSecondName()
@@ -1043,7 +1050,7 @@ class NCLNameCaseCore extends NCL
     }
 
     /**
-     * Функция пытается применить цыпочку правил для женских фамилий
+     * Функция пытается применить цепочку правил для женских фамилий
      * @return boolean true - если было использовано правило из списка, false - если правило не было найденым
      */
     protected function womanSecondName()
@@ -1107,7 +1114,7 @@ class NCLNameCaseCore extends NCL
     {
         
     }
-    
+
     /**
      * Возвращает версию библиотеки
      * @return string версия библиотеки
@@ -1116,7 +1123,7 @@ class NCLNameCaseCore extends NCL
     {
         return $this->version;
     }
-    
+
     /**
      * Возвращает версию использованого языкового файла
      * @return string версия языкового файла
