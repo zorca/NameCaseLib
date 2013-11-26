@@ -1,19 +1,12 @@
 {
-    "name": "stansmet/name-case-lib",
+    "name": "coyl/name-case-lib",
     "type": "library",
     "description": "Fork of http://namecaselib.com/",
     "keywords": [
-        "NameCaseLib",
-        "stansmet"
+        "NameCaseLib"
     ],
-    "homepage": "https://github.com/stansmet/NameCaseLib",
+    "homepage": "https://github.com/coyl/NameCaseLib",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Stanislaw Smetanin",
-            "email": "stanislaw@smetanin-online.name"
-        }
-    ],
     "require": {
         "php": ">=5.3.2"
     },
