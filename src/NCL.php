@@ -3,7 +3,7 @@
  * @license Dual licensed under the MIT or GPL Version 2 licenses.
  * @package NameCaseLib
  */
-
+namespace NCL;
 /**
  * Класс, который содержит основные константы библиотеки:
  * - индексы мужского и женского пола
@@ -106,5 +106,3 @@ class NCL
     static $UaKlychnyi = 6;
 
 }
-
-?>

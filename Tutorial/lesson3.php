@@ -1,7 +1,10 @@
 <?php
 
+use NCL\NCL;
+use NCL\NCLNameCaseRu;
+
 header('Content-type: text/html; charset=utf-8');
-require '../Library/NCL.NameCase.ru.php';
+
 $nc = new NCLNameCaseRu();
 
 $people = array("Андрей Николаевич", 'Ирина', 'Ефиопский Аркадий Василевич',

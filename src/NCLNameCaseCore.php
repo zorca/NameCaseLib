@@ -1,5 +1,5 @@
 <?php
-
+namespace NCL;
 /**
  * @license Dual licensed under the MIT or GPL Version 2 licenses.
  * @package NameCaseLib
@@ -7,15 +7,6 @@
 /**
  * 
  */
-if (!defined('NCL_DIR'))
-{
-    define('NCL_DIR', dirname(__FILE__));
-}
-
-require_once NCL_DIR . '/NCL.php';
-require_once NCL_DIR . '/NCLStr.php';
-require_once NCL_DIR . '/NCLNameCaseWord.php';
-require_once NCL_DIR . '/Money2Str.php';
 
 /**
  * <b>NCL NameCase Core</b>
@@ -230,6 +221,7 @@ class NCLNameCaseCore extends NCL
      * Функция проверяет, входит ли имя <var>$nameNeedle</var> в перечень имен <var>$names</var>.
      * @param string $nameNeedle - имя которое нужно найти
      * @param array $names - перечень имен в котором нужно найти имя
+     * @return bool
      */
     protected function inNames($nameNeedle, $names)
     {
@@ -1140,5 +1132,3 @@ class NCLNameCaseCore extends NCL
     }
 
 }
-
-?>

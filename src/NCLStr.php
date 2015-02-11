@@ -3,7 +3,7 @@
  * @license Dual licensed under the MIT or GPL Version 2 licenses.
  * @package NameCaseLib
  */
-
+namespace NCL;
 /**
  * Класс содержит функции для работы со строками, которые используются в NCLNameCaseLib
  * 
@@ -142,5 +142,3 @@ class NCLStr
         return mb_split($pattern, $string);
     }
 }
-
-?>

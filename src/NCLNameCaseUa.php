@@ -1,5 +1,5 @@
 <?php
-
+namespace NCL;
 /**
  * @license Dual licensed under the MIT or GPL Version 2 licenses.
  * @package NameCaseLib
@@ -7,7 +7,7 @@
 /**
  * 
  */
-require_once dirname(__FILE__) . '/NCL/NCLNameCaseCore.php';
+
 
 /**
  * <b>NCL NameCase Ukranian Language</b>
@@ -782,5 +782,3 @@ class NCLNameCaseUa extends NCLNameCaseCore
     }
 
 }
-
-?>
