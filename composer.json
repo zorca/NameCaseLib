@@ -1,9 +1,9 @@
 {
-    "name": "coyl/name-case-lib",
+    "name": "kozz/name-case-lib",
     "type": "library",
     "description": "Fork of http://namecaselib.com/",
     "keywords": [
-        "NameCaseLib"
+        "NameCaseLib","Russian","Ukrainian","Name","Lastname","inflection"
     ],
     "homepage": "https://github.com/coyl/NameCaseLib",
     "license": "MIT",
