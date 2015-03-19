@@ -907,7 +907,7 @@ class NCLNameCaseCore extends NCL
     {
         $this->AllWordCases();
         //Если не указан падеж используем другую функцию
-        if (is_null($caseNum) or !$caseNum)
+        if ($caseNum === null)
         {
             return $this->getFormattedArray($format);
         }
