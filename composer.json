@@ -1,5 +1,5 @@
 {
-    "name": "yadelivery/name-case-lib",
+    "name": "zorca/name-case-lib",
     "type": "library",
     "description": "Library for inflecting Russian and Ukrainian Names. Fork of http://namecaselib.com/",
     "keywords": [
