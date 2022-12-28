@@ -1,5 +1,5 @@
 {
-    "name": "zorca/name-case-lib",
+    "name": "KalinichenkoRoman/NameCaseLib",
     "type": "library",
     "description": "Library for inflecting Russian and Ukrainian Names. Fork of http://namecaselib.com/",
     "keywords": [
